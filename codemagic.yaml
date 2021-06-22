@@ -1,0 +1,23 @@
+workflows:
+  my-workflow:                # workflow ID
+    name: My workflow name    # workflow name displayed in Codemagic UI
+    instance_type: mac_mini   # machine instance type
+    max_build_duration: 60    # build duration in minutes (min 1, max 120)
+    cache:
+      cache_paths:
+      - $FLUTTER_ROOT/.pub-cache
+    triggering:
+      events:                       # List the events that trigger builds
+        - push
+        - pull_request
+        - tag
+      tag_patterns:                 # Include or exlude watched tag labels
+      - pattern: '*'
+        include: true
+      - pattern: excluded-tag
+        include: false
+      - pattern: included-tag
+        include: true
+      cancel_previous_builds: false
+    artifacts:
+      - build/app/outputs/flutter-apk/apk-release.apk

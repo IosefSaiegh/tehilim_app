@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "385785227207",
+    "project_id": "tehilim-350dc",
+    "storage_bucket": "tehilim-350dc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:385785227207:android:f470e1fdae0bb51f521be2",
+        "android_client_info": {
+          "package_name": "com.example.tehilim"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "385785227207-n9r8d8hl7v492eujjvdfavbhnqt2pcso.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOtWbBnbjZD6C2HaIKV8zKfwZGfMfv8LY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "385785227207-n9r8d8hl7v492eujjvdfavbhnqt2pcso.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

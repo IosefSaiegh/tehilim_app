@@ -1,0 +1,28 @@
+{
+  "name": "Tehilim",
+  "css_prefix_text": "",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "glyphs": [
+    {
+      "uid": "3d349daaea304032a7669b4f24931b6c",
+      "css": "shuffle",
+      "code": 59392,
+      "src": "entypo"
+    },
+    {
+      "uid": "b76899e1310fc72d42a9ca30df3056fa",
+      "css": "calendar_day",
+      "code": 63363,
+      "src": "fontawesome5"
+    },
+    {
+      "uid": "5b1ed915cc09299be629ccc6c11ddd1b",
+      "css": "select",
+      "code": 59474,
+      "src": "linearicons"
+    }
+  ]
+}
