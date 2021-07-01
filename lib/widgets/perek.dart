@@ -13,6 +13,8 @@ class Perek extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       borderOnForeground: true,
+      margin: EdgeInsets.all(15.0),
+      elevation: 1.0,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(20.0),
       ),
