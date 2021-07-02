@@ -105,9 +105,7 @@ class PantallaPrincipal extends StatelessWidget {
                   ),
                 ),
               ),
-              Divider(
-                thickness: 1.0,
-              ),
+              Divider(),
               ListTile(
                 leading: Icon(
                   RpgAwesome.candle_fire,
@@ -122,9 +120,7 @@ class PantallaPrincipal extends StatelessWidget {
                   ),
                 ),
               ),
-              Divider(
-                thickness: 1.0,
-              ),
+              Divider(),
               ListTile(
                 leading: Icon(
                   RpgAwesome.candle_fire,
@@ -139,9 +135,7 @@ class PantallaPrincipal extends StatelessWidget {
                   ),
                 ),
               ),
-              Divider(
-                thickness: 1.0,
-              ),
+              Divider(),
               ListTile(
                 leading: Icon(
                   RpgAwesome.candle_fire,
