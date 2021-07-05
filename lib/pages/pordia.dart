@@ -20,8 +20,8 @@ class PorDia extends StatelessWidget {
         children: [
           Padding(
             padding: EdgeInsets.only(
-              left: 50,
-              right: 50,
+              left: 75,
+              right: 75,
               top: 20,
             ),
             child: ElevatedButton(
@@ -52,8 +52,8 @@ class PorDia extends StatelessWidget {
           ),
           Padding(
             padding: EdgeInsets.only(
-              left: 50,
-              right: 50,
+              left: 75,
+              right: 75,
               top: 10,
             ),
             child: ElevatedButton(
@@ -84,8 +84,8 @@ class PorDia extends StatelessWidget {
           ),
           Padding(
             padding: EdgeInsets.only(
-              left: 50,
-              right: 50,
+              left: 75,
+              right: 75,
               top: 10,
             ),
             child: ElevatedButton(
@@ -116,8 +116,8 @@ class PorDia extends StatelessWidget {
           ),
           Padding(
             padding: EdgeInsets.only(
-              left: 50,
-              right: 50,
+              left: 75,
+              right: 75,
               top: 10,
             ),
             child: ElevatedButton(
@@ -148,8 +148,8 @@ class PorDia extends StatelessWidget {
           ),
           Padding(
             padding: EdgeInsets.only(
-              left: 50,
-              right: 50,
+              left: 75,
+              right: 75,
               top: 10,
             ),
             child: ElevatedButton(
@@ -180,8 +180,8 @@ class PorDia extends StatelessWidget {
           ),
           Padding(
             padding: EdgeInsets.only(
-              left: 50,
-              right: 50,
+              left: 75,
+              right: 75,
               top: 10,
             ),
             child: ElevatedButton(
@@ -212,8 +212,8 @@ class PorDia extends StatelessWidget {
           ),
           Padding(
             padding: EdgeInsets.only(
-              left: 50,
-              right: 50,
+              left: 75,
+              right: 75,
               top: 10,
             ),
             child: ElevatedButton(
