@@ -15,10 +15,11 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+    // El Material App es la RAIZ de la app
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         // This is the theme of your application.
-        primarySwatch: Colors.blue, //#2196f3
+        primarySwatch: Colors.blue, //#2196f3 - azul
       ),
       home: PantallaPrincipal(),
     );

@@ -34,59 +34,30 @@ class _TehilimContinuoPageState extends State<TehilimContinuoPage> {
             onPressed: () {
               showDialog(
                 context: context,
-                builder: (context) {
+                builder: (ctx) {
                   return AlertDialog(
                     title: Text('יצירת ספר תהילים'),
-                    content: Form(
-                      child: Column(
-                        children: [
-                          Row(
+                    content: Column(
+                      children: [
+                        Form(
+                          child: Column(
                             children: [
-                              //Elegir si refue shelema, leiluy nismat
-                              DropdownButtonFormField<String>(
-                                value: dropdownValue,
-                                onChanged: (String? newValue) {
-                                  setState(() {
-                                    dropdownValue = newValue;
-                                  });
-                                },
-                                items: opcionesFormulario
-                                    .map<DropdownMenuItem<String>>(
-                                  (String value) {
-                                    return DropdownMenuItem<String>(
-                                      value: value,
-                                      child: Padding(
-                                        padding: EdgeInsets.symmetric(
-                                          horizontal: 5.0,
-                                        ),
-                                        child: Text(
-                                          value,
-                                          style: GoogleFonts.assistant(
-                                            fontSize: 20.0,
-                                          ),
-                                        ),
-                                      ),
-                                    );
-                                  },
-                                ).toList(),
-                              ),
-                              TextFormField(),
+                              
                             ],
                           ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
                     actions: [
-                      TextButton(
-                        onPressed: () {},
-                        child: Text('המשך'),
-                      ),
                       TextButton(
                         onPressed: () {
                           Navigator.pop(context);
                         },
-                        child: Text('בטל'),
-                      ),
+                        child: Text(
+                          'Ok',
+                          style: GoogleFonts.raleway(),
+                        ),
+                      )
                     ],
                   );
                 },
@@ -99,3 +70,67 @@ class _TehilimContinuoPageState extends State<TehilimContinuoPage> {
     );
   }
 }
+
+              // showDialog(
+              //   context: context,
+              //   builder: (context) {
+              //     return AlertDialog(
+              //       shape: RoundedRectangleBorder(
+              //         borderRadius: BorderRadius.circular(20.0),
+              //       ),
+              //       title: Text('יצירת ספר תהילים'),
+              //       content: Form(
+              //         autovalidateMode: AutovalidateMode.always,
+              //         child: Column(
+              //           children: [
+              //             Row(
+              //               children: [
+              //                 //Elegir si refue shelema, leiluy nismat
+              //                 DropdownButtonFormField<String>(
+              //                   value: dropdownValue,
+              //                   onChanged: (String? newValue) {
+              //                     setState(() {
+              //                       dropdownValue = newValue;
+              //                     });
+              //                   },
+              //                   items: opcionesFormulario
+              //                       .map<DropdownMenuItem<String>>(
+              //                     (String value) {
+              //                       return DropdownMenuItem<String>(
+              //                         value: value,
+              //                         child: Padding(
+              //                           padding: EdgeInsets.symmetric(
+              //                             horizontal: 5.0,
+              //                           ),
+              //                           child: Text(
+              //                             value,
+              //                             style: GoogleFonts.assistant(
+              //                               fontSize: 20.0,
+              //                             ),
+              //                           ),
+              //                         ),
+              //                       );
+              //                     },
+              //                   ).toList(),
+              //                 ),
+              //                 TextFormField(),
+              //               ],
+              //             ),
+              //           ],
+              //         ),
+              //       ),
+              //       actions: [
+              //         TextButton(
+              //           onPressed: () {},
+              //           child: Text('המשך'),
+              //         ),
+              //         TextButton(
+              //           onPressed: () {
+              //             Navigator.pop(context);
+              //           },
+              //           child: Text('בטל'),
+              //         ),
+              //       ],
+              //     );
+              //   },
+              // );

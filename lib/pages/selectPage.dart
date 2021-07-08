@@ -1118,7 +1118,6 @@ class _SelectPageState extends State<SelectPage> {
                 },
               ).toList(),
               icon: Icon(Icons.arrow_drop_down_rounded),
-              // hint: Text('אנא בחר פרק'),
             ),
           ),
           perekWidget,
