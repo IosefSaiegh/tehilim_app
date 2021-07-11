@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tehilim/pages/crear_libro.dart';
-import 'package:tehilim/pages/pordia.dart';
+import 'package:tehilim/pages/entrar_libro.dart';
 
 class TehilimContinuoPage extends StatefulWidget {
   @override
@@ -57,7 +57,32 @@ class _TehilimContinuoPageState extends State<TehilimContinuoPage> {
                 ),
               ),
             ),
-          )
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20.0),
+            child: ElevatedButton(
+              style: ButtonStyle(
+                elevation: MaterialStateProperty.resolveWith((states) => 5),
+                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                  RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(18.0),
+                  ),
+                ),
+              ),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => EntrarLibroPage()),
+                );
+              },
+              child: Text(
+                'לכניסה לקריאת ספר',
+                style: GoogleFonts.assistant(
+                  fontSize: 17.5,
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     );

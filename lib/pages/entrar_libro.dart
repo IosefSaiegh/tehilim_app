@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class CrearLibroPage extends StatelessWidget {
+class EntrarLibroPage extends StatelessWidget {
   final formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class CrearLibroPage extends StatelessWidget {
           },
         ),
         title: Text(
-          'יצירת ספר תהילים',
+          'לכניסה לקריאת ספר תהילים',
           style: GoogleFonts.rubik(
             fontSize: 25,
             fontWeight: FontWeight.w500,
@@ -73,7 +73,7 @@ class CrearLibroPage extends StatelessWidget {
                             TextButton(
                               onPressed: _submit,
                               child: Text(
-                                'צור קריאת ספר חדש',
+                                'היכנס לקריאת פרק תהילים בספר המוקלד',
                                 style: GoogleFonts.assistant(),
                               ),
                             ),
@@ -102,6 +102,5 @@ class CrearLibroPage extends StatelessWidget {
 
   void _submit() {
     if (!formKey.currentState!.validate()) return;
-    print('todo ok');
   }
 }
