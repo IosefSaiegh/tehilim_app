@@ -1,8 +1,17 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tehilim/models/libro_model.dart';
 
-class CrearLibroPage extends StatelessWidget {
+class CrearLibroPage extends StatefulWidget {
+  @override
+  State<CrearLibroPage> createState() => _CrearLibroPageState();
+}
+
+class _CrearLibroPageState extends State<CrearLibroPage> {
   final formKey = GlobalKey<FormState>();
+  LibroElement libro = LibroElement();
+  final FirebaseApp app = FirebaseApp(name: 'tehilim-421f2');
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,6 +48,7 @@ class CrearLibroPage extends StatelessWidget {
                         Container(
                           width: 250,
                           child: TextFormField(
+                            onSaved: (value) => libro.nombre = value,
                             validator: (value) {
                               if (value!.isEmpty) {
                                 return 'שם לא תקין';
@@ -102,6 +112,8 @@ class CrearLibroPage extends StatelessWidget {
 
   void _submit() {
     if (!formKey.currentState!.validate()) return;
-    print('todo ok');
+    // ignore: unnecessary_statements
+    formKey.currentState!.save;
+    print(libro.nombre);
   }
 }

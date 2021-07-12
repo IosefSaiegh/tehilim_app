@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tehilim/models/libro_model.dart';
+import 'package:tehilim/providers/libro_provider.dart';
 
 class EntrarLibroPage extends StatelessWidget {
   final formKey = GlobalKey<FormState>();
+  final libroProvider = LibrosProvider();
+  LibroElement libro = LibroElement();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -102,5 +106,6 @@ class EntrarLibroPage extends StatelessWidget {
 
   void _submit() {
     if (!formKey.currentState!.validate()) return;
+    libroProvider.crearLibro(libro);
   }
 }
