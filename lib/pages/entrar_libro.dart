@@ -3,7 +3,12 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:tehilim/models/libro_model.dart';
 import 'package:tehilim/providers/libro_provider.dart';
 
-class EntrarLibroPage extends StatelessWidget {
+class EntrarLibroPage extends StatefulWidget {
+  @override
+  State<EntrarLibroPage> createState() => _EntrarLibroPageState();
+}
+
+class _EntrarLibroPageState extends State<EntrarLibroPage> {
   final formKey = GlobalKey<FormState>();
   final libroProvider = LibrosProvider();
   LibroElement libro = LibroElement();
