@@ -1,7 +1,3 @@
-// To parse this JSON data, do
-//
-//     final libro = libroFromJson(jsonString);
-
 import 'dart:convert';
 
 LibroElement libroFromJson(String str) =>

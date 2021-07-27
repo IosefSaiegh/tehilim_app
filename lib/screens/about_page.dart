@@ -26,123 +26,37 @@ class AboutPage extends StatelessWidget {
         children: [
           Padding(
             padding: EdgeInsets.only(
-              top: 20.0,
-              bottom: 10,
+              top: 20,
+              right: 20,
+              left: 20,
             ),
-            child: Text(
-              'רפואה שלימה',
-              style: GoogleFonts.assistant(
-                fontSize: 30,
-                fontWeight: FontWeight.w700,
-              ),
-              textAlign: TextAlign.center,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                Text(
+                  'האפליקציה נוצרה ב2021 ללא מטרות רווח לעילוי נשמת:',
+                  textDirection: TextDirection.rtl,
+                  style: GoogleFonts.assistant(
+                    fontSize: 17.5,
+                  ),
+                ),
+                Text(
+                  '''
+משה בן מרים זצ"ל
+דוד בן רינה זצ"ל
+אליהו בן אסתר זצ"ל
+אברהם בן מזל זצ"ל
+שרה בת רחל זצ"ל
+אליהו בן זימבול זצ"ל
+''',
+                  textDirection: TextDirection.rtl,
+                  style: GoogleFonts.assistant(
+                    fontSize: 20,
+                  ),
+                ),
+              ],
             ),
-          ),
-          Padding(
-            padding: EdgeInsets.only(
-              top: 10.0,
-              right: 10.0,
-            ),
-            child: Text(
-              'ישראל מרדכי בן רחל',
-              textAlign: TextAlign.right,
-              style: GoogleFonts.assistant(
-                fontSize: 21.0,
-              ),
-            ),
-          ),
-          Padding(
-            padding: EdgeInsets.only(
-              top: 5.0,
-              right: 10.0,
-            ),
-            child: Text(
-              'הרב רפא-ל גבריא-ל אליהו בן רחל חיה',
-              textAlign: TextAlign.right,
-              style: GoogleFonts.assistant(
-                fontSize: 21.0,
-              ),
-            ),
-          ),
-          Padding(
-            padding: EdgeInsets.only(
-              top: 5.0,
-              right: 10.0,
-            ),
-            child: Text(
-              'רות בת רוזה',
-              textAlign: TextAlign.right,
-              style: GoogleFonts.assistant(
-                fontSize: 21.0,
-              ),
-            ),
-          ),
-          Padding(
-            padding: EdgeInsets.only(
-              top: 20.0,
-              bottom: 10,
-            ),
-            child: Text(
-              'לעילוי נשמת',
-              style: GoogleFonts.assistant(
-                fontSize: 30,
-                fontWeight: FontWeight.w700,
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Padding(
-            padding: EdgeInsets.only(
-              top: 5.0,
-              right: 10.0,
-            ),
-            child: Text(
-              'משה בן מרים',
-              textAlign: TextAlign.right,
-              style: GoogleFonts.assistant(
-                fontSize: 21.0,
-              ),
-            ),
-          ),
-          Padding(
-            padding: EdgeInsets.only(
-              top: 5.0,
-              right: 10.0,
-            ),
-            child: Text(
-              'אליהו בן אסתר',
-              textAlign: TextAlign.right,
-              style: GoogleFonts.assistant(
-                fontSize: 21.0,
-              ),
-            ),
-          ),
-          Padding(
-            padding: EdgeInsets.only(
-              top: 5.0,
-              right: 10.0,
-            ),
-            child: Text(
-              'אליהו בן זימבול',
-              textAlign: TextAlign.right,
-              style: GoogleFonts.assistant(
-                fontSize: 21.0,
-              ),
-            ),
-          ),
-          Padding(
-            padding: EdgeInsets.only(
-              top: 5.0,
-              right: 10.0,
-            ),
-            child: Text(
-              'דוד בן רינה',
-              textAlign: TextAlign.right,
-              style: GoogleFonts.assistant(
-                fontSize: 21.0,
-              ),
-            ),
-          ),
+          )
         ],
       ),
     );

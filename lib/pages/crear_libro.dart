@@ -1,4 +1,3 @@
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tehilim/models/libro_model.dart';
@@ -11,7 +10,6 @@ class CrearLibroPage extends StatefulWidget {
 class _CrearLibroPageState extends State<CrearLibroPage> {
   final formKey = GlobalKey<FormState>();
   LibroElement libro = LibroElement();
-  final FirebaseApp app = FirebaseApp(name: 'tehilim-421f2');
   @override
   Widget build(BuildContext context) {
     return Scaffold(

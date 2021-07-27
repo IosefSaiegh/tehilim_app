@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tehilim/widgets/perek.dart';
 
-/// This is the main application widget.
 class SelectPage extends StatefulWidget {
   @override
   _SelectPageState createState() => _SelectPageState();

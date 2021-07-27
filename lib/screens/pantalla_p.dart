@@ -1,3 +1,4 @@
+import 'package:boxicons/boxicons.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttericon/rpg_awesome_icons.dart';
 
@@ -6,80 +7,74 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:tehilim/pages/pordia.dart';
 import 'package:tehilim/pages/selectPage.dart';
 import 'package:tehilim/pages/tehilim_continuo.dart';
+import 'package:tehilim/screens/about_page.dart';
 
 class PantallaPrincipal extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      //Seleccion de ventanas
       initialIndex: 2,
       length: 3,
       child: Scaffold(
-        //Scaffold es la pantalla
         appBar: AppBar(
-          //El header de la pantalla
+          leading: IconButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (BuildContext context) => AboutPage(),
+                ),
+              );
+            },
+            icon: Icon(Boxicons.bxs_info_circle),
+          ),
           centerTitle: true,
           title: Text(
             'תהילים',
-            //Text de appBar
             style: GoogleFonts.rubik(
-              //estilo con fuente
-              fontSize: 30, //tamanio
-              fontWeight: FontWeight.w500, //grosor
+              fontSize: 30,
+              fontWeight: FontWeight.w500,
             ),
           ),
           actions: [
-            //Acciones de appbar
             IconButton(
-              // Boton con icono
               onPressed: () {
-                //funcion que hace al hacer clic
                 _showModalBottomSheet(context);
               },
-              icon: Icon(Icons.info_outline_rounded), // Icono
+              icon: Icon(Boxicons.bxs_book_open),
             ),
           ],
           bottom: TabBar(
-            //Para selccionar ventana de app
-            indicatorWeight: 2.0, // el grosor del indicador de la pantalla
+            indicatorWeight: 2.0,
             unselectedLabelStyle: GoogleFonts.assistant(
-              // el estilo de texto de ventana NO SELECCIONADA
-              fontSize: 20, //Tamanio
+              fontSize: 20,
             ),
             labelStyle: GoogleFonts.assistant(
-              //Estilo de texto en ventana SI SELECCIONADA
-              fontSize: 20, //Tamanio
-              fontWeight: FontWeight.w600, //Grosor
+              fontSize: 20,
+              fontWeight: FontWeight.w600,
             ),
             tabs: [
               Tab(
-                //Una ventana
                 text: 'לפי יום',
               ),
               Tab(
-                //Una ventana
                 text: 'בחירת פרק',
               ),
               Tab(
-                //Una ventana
                 text: 'גמירת ספר משותף',
               ),
             ],
           ),
         ),
         body: TabBarView(
-          //En cada TAB() que se va mostra
           children: [
             Center(
-              //en uno
               child: PorDia(),
             ),
             Center(
-              //en el segundo
               child: SelectPage(),
             ),
             Center(
-              //y en el ultimo
               child: TehilimContinuoPage(),
             ),
           ],
@@ -87,9 +82,8 @@ class PantallaPrincipal extends StatelessWidget {
       ),
     );
   }
-  //Accion a disparar cuando haga clic en el boton de actions[], que vimos arriba
+
   _showModalBottomSheet(BuildContext context) {
-    //Mostrar como footer con opacidad a lo de arriba
     showModalBottomSheet(
       context: context,
       builder: (context) {
@@ -98,9 +92,8 @@ class PantallaPrincipal extends StatelessWidget {
           children: [
             Padding(
               padding: EdgeInsets.only(
-                //Padding
-                top: 10.0,//de arriba
-                bottom: 10.0,//de abajo
+                top: 10.0,
+                bottom: 10.0,
               ),
               child: Text(
                 'לעילוי נשמת',
@@ -108,15 +101,13 @@ class PantallaPrincipal extends StatelessWidget {
                   fontSize: 25,
                   fontWeight: FontWeight.w700,
                 ),
-                textAlign: TextAlign.center, //Alineamento de texto
+                textAlign: TextAlign.center,
               ),
             ),
             ListTile(
-              //objeto de lista
               leading: Icon(
-                //parte que va a lado de texto
                 RpgAwesome.candle_fire,
-                color: Colors.orange, //color de icono
+                color: Colors.orange,
               ),
               title: Text(
                 'משה בן מרים',
@@ -132,7 +123,6 @@ class PantallaPrincipal extends StatelessWidget {
                 horizontal: 20.0,
               ),
               child: Divider(),
-              //divididor
             ),
             ListTile(
               leading: Icon(

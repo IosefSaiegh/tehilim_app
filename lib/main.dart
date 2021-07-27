@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:splash_screen_view/SplashScreenView.dart';
 
 import 'package:tehilim/screens/pantalla_p.dart';
 
 void main() {
   runApp(MyApp());
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+    statusBarColor: Colors.red,
+  ));
 }
 
 class MyApp extends StatefulWidget {
@@ -26,8 +31,18 @@ class _MyAppState extends State<MyApp> {
           titleTextStyle: GoogleFonts.rubik(),
         ),
       ),
-      home: PantallaPrincipal(),
+      home: SplashScreenView(
+        navigateRoute: PantallaPrincipal(),
+        duration: 6000,
+        imageSize: 130,
+        imageSrc: "assets/tehilimlogo.png",
+        backgroundColor: Colors.white,
+        text: 'תהילים',
+        textType: TextType.TyperAnimatedText,
+        textStyle: GoogleFonts.rubik(
+          fontSize: 30.0,
+        ),
+      ),
     );
   }
-  
 }
