@@ -35,12 +35,14 @@ class _MyAppState extends State<MyApp> {
         navigateRoute: PantallaPrincipal(),
         duration: 6000,
         imageSize: 130,
+        speed: 3,
         imageSrc: "assets/tehilimlogo.png",
         backgroundColor: Colors.white,
         text: 'תהילים',
         textType: TextType.TyperAnimatedText,
         textStyle: GoogleFonts.rubik(
           fontSize: 30.0,
+          fontWeight: FontWeight.w600,
         ),
       ),
     );
