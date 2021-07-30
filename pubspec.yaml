@@ -20,14 +20,60 @@ dependencies:
   fluttericon: ^2.0.0
   google_fonts: ^2.1.0
   http: ^0.13.3
-  splash_screen_view: ^3.0.0
+  # splash_screen_view: ^3.0.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
     # flutter_launcher_icons: ^0.9.0
+  flutter_native_splash: ^1.2.0
 # flutter_launcher_name:
 #   name: "Tehilim - תהילים"
+
+flutter_native_splash:
+  color: "#42a5f5"
+  image: assets/tehilimlogo.png
+  android: true
+  ios: true
+  web: true
+
+  # The position of the splash image can be set with android_gravity, ios_content_mode, and
+  # web_image_mode parameters.  All default to center.
+  #
+  # android_gravity can be one of the following Android Gravity (see 
+  # https://developer.android.com/reference/android/view/Gravity): bottom, center, 
+  # center_horizontal, center_vertical, clip_horizontal, clip_vertical, end, fill, fill_horizontal,
+  # fill_vertical, left, right, start, or top.
+  #android_gravity: center
+  #
+  # ios_content_mode can be one of the following iOS UIView.ContentMode (see 
+  # https://developer.apple.com/documentation/uikit/uiview/contentmode): scaleToFill, 
+  # scaleAspectFit, scaleAspectFill, center, top, bottom, left, right, topLeft, topRight, 
+  # bottomLeft, or bottomRight.
+  #ios_content_mode: center
+  #
+  # web_image_mode can be one of the following modes: center, contain, stretch, and cover.
+  #web_image_mode: center
+
+  # To hide the notification bar, use the fullscreen parameter.  Has no affect in web since web 
+  # has no notification bar.  Defaults to false.
+  # NOTE: Unlike Android, iOS will not automatically show the notification bar when the app loads.
+  #       To show the notification bar, add the following code to your Flutter app:
+  #       WidgetsFlutterBinding.ensureInitialized();
+  #       SystemChrome.setEnabledSystemUIOverlays([SystemUiOverlay.bottom, SystemUiOverlay.top]);
+  #fullscreen: true
+  
+  # If you have changed the name(s) of your info.plist file(s), you can specify the filename(s) 
+  # with the info_plist_files parameter.  Remove only the # characters in the three lines below,
+  # do not remove any spaces:
+  #info_plist_files:
+  #  - 'ios/Runner/Info-Debug.plist'
+  #  - 'ios/Runner/Info-Release.plist'
+
+  # To enable support for Android 12, set the following parameter to true.  Defaults to false.
+  #android12: true
+
+
 flutter_icons:
   image_path: 'assets/tehilimlogo.png'
   android: true
